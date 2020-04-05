@@ -5,21 +5,19 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-/**
- *@author Christos Brentas, A.M: 4442, username: cse84442, email: cbrentas@gmail.com
- */
 
 public class Main {
+
     public static void main(String[] args) {
         ArrayList<ArrayList<Area>> kthria = new ArrayList<ArrayList<Area>>();
         int arithmos = 0;
         int metrhths = 0;
 
-        Scanner elengths = new Scanner(System.in);
+        Scanner eLengths = new Scanner(System.in);
 
         System.out.print("1)Create a new building. \n2)Create a new building area. \n3)Renew the measurements.\n4)Conflagration check.\n5)Exit menu.\nPlease choose one of the above: ");
         while (arithmos != 5) {
-            arithmos = elengths.nextInt();
+            arithmos = eLengths.nextInt();
 
             if (arithmos == 1) {
                 kthria.add(new ArrayList<Area>());
@@ -27,7 +25,7 @@ public class Main {
 
             } else if (arithmos == 2) {
                 System.out.println("Please enter the number of the building you want to create an area to: ");
-                int arithmos2 = elengths.nextInt();
+                int arithmos2 = eLengths.nextInt();
                 kthria.get(arithmos2 - 1).add(new Area());
                 kthria.get(arithmos2 - 1).get(kthria.get(arithmos2 - 1).size() - 1).setAreaCode(metrhths + 1);
                 kthria.get(arithmos2 - 1).get(kthria.get(arithmos2 - 1).size() - 1).getTempSensor().setTempCode(metrhths + 1);
@@ -87,7 +85,7 @@ public class Main {
                     System.out.print("\n1)Create a new building. \n2)Create a new building area. \n3)Renew the measurements.\n4)Conflagration check.\n5)Exit menu.\nPlease choose one of the above: ");
                 } else {
                     System.out.println("Please enter the Area code you want to check for fire: ");
-                    int temp = elengths.nextInt();
+                    int temp = eLengths.nextInt();
                     Area possibleArea = new Area();
                     for (int i = 0; i < kthria.size(); i++) {
                         for (int z = 0; z < kthria.get(i).size(); z++) {

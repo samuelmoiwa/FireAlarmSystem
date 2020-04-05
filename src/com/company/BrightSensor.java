@@ -3,14 +3,11 @@ package com.company;
 import java.util.Random;
 
 
-/**
- *@author Christos Brentas, A.M: 4442, username: cse84442, email: cbrentas@gmail.com
- */
 
 public class BrightSensor {
     private int t = 0;
     private double brightness = 0;
-    private double brightreliability = 0;
+    private double brightReliability = 0;
     private int code;
 
     public BrightSensor(){
@@ -21,13 +18,13 @@ public class BrightSensor {
         this.brightness = temperature;
         this.t = t;
         this.code = code;
-        this.brightreliability = brightreliability;
+        this.brightReliability = brightreliability;
     }
 
     public BrightSensor(BrightSensor other){
         other.brightness = this.brightness;
         other.t = this.t;
-        other.brightreliability = this.brightreliability;
+        other.brightReliability = this.brightReliability;
     }
 
     public int getBrightCode(){
@@ -54,7 +51,7 @@ public class BrightSensor {
         brightness = 200 * r.nextDouble();
     }
     public double getReliabilityBright(){
-        return brightreliability = Math.exp(-(Math.pow(10,-3)) * t);
+        return brightReliability = Math.exp(-(Math.pow(10,-3)) * t);
     }
 
     public  String toString(){
@@ -62,7 +59,7 @@ public class BrightSensor {
     }
 
     public boolean equals(BrightSensor allos){
-        if(this.t == allos.t && this.brightness == allos.brightness && this.brightreliability == allos.brightreliability){
+        if(this.t == allos.t && this.brightness == allos.brightness && this.brightReliability == allos.brightReliability){
             return true;
         }
         else

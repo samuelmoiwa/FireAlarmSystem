@@ -2,9 +2,7 @@ package com.company;
 
 import java.text.DecimalFormat;
 
-/**
- *@author Christos Brentas, A.M: 4442, username: cse84442, email: cbrentas@gmail.com
- */
+
 
 public class Area implements Comparable<Area>{
     private BrightSensor sensorFwteinothtas = new BrightSensor();

@@ -2,21 +2,19 @@ package com.company;
 
 import java.util.*;
 
-/**
- *@author Christos Brentas, A.M: 4442, username: cse84442, email: cbrentas@gmail.com
- */
+
 
 public class TempSensor {
     private int t=0;
     private int temperature = 0;
-    private double tempreliability = 0;
+    private double tempReliability = 0;
     private int code;
 
-    public TempSensor (int temperature, int t, int code, double tempreliability){
+    public TempSensor (int temperature, int t, int code, double tempReliability){
         this.temperature = temperature;
         this.t = t;
         this.code = code;
-        this.tempreliability = tempreliability;
+        this.tempReliability = tempReliability;
     }
 
     public TempSensor(){
@@ -34,7 +32,7 @@ public class TempSensor {
     public TempSensor(TempSensor other){
         other.temperature = this.temperature;
         other.t = this.t;
-        other.tempreliability = this.tempreliability;
+        other.tempReliability = this.tempReliability;
 
     }
 
@@ -54,7 +52,7 @@ public class TempSensor {
         temperature = rand.nextInt(51);
     }
     public double getReliabilityTemp(){
-        return tempreliability = Math.exp(-(Math.pow(10,-3)) * t);
+        return tempReliability = Math.exp(-(Math.pow(10,-3)) * t);
     }
 
     public  String toString(){
@@ -62,7 +60,7 @@ public class TempSensor {
     }
 
     public boolean equals(TempSensor allos){
-        if(this.t == allos.t && this.temperature == allos.temperature && this.tempreliability == allos.tempreliability){
+        if(this.t == allos.t && this.temperature == allos.temperature && this.tempReliability == allos.tempReliability){
             return true;
         }
         else
